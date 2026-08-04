@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "servicos": [
+    {
+      "nome": "Saúde Ocupacional",
+      "desc": "Gestão completa do PCMSO, exames admissionais, periódicos, demissionais e complementares.",
+      "detalhes": [
+        {"titulo": "PCMSO", "desc": "Programa de Controle Médico de Saúde Ocupacional."},
+        {"titulo": "Exames Ocupacionais", "desc": "Exame Admissional, Exame Periódico, Exame Demissional, Exame de Mudança de Função, Exame de Retorno ao Trabalho."},
+        {"titulo": "Emissão de Relatório Analítico", "desc": "Análise individualizada e criteriosa dos exames alterados, gerando respaldo jurídico e reduzindo o risco de abertura indevida de CAT. Um exame alterado, quando não tem a causa ocupacional descartada, pode ser interpretado como doença ocupacional ou acidente de trabalho."},
+        {"titulo": "Avaliação Médica em Casos de Dúvida quanto à Etiologia Ocupacional da Doença", "desc": ""},
+        {"titulo": "Recebimento de Atestados", "desc": "Permite um detalhamento mais preciso do motivo do afastamento, com respaldo ético e legal, gerando dados mais fidedignos para ações de saúde a curto, médio e longo prazo, além de possibilitar ações rápidas em casos de adoecimento físico ou mental."},
+        {"titulo": "Programa de Conservação Auditiva", "desc": "Para trabalhadores expostos a ruído. Além de ser exigência legal, garante respaldo para confirmar a efetividade dos equipamentos de proteção auditiva utilizados."},
+        {"titulo": "PPR — Programa de Proteção Respiratória", "desc": "Gestão do uso adequado de equipamentos de proteção respiratória para trabalhadores expostos a agentes inalantes, garantindo conformidade legal e respaldo técnico."},
+        {"titulo": "Gestão de Fatores Psicossociais", "desc": "Implementação da gestão atualizada dos fatores psicossociais no ambiente de trabalho, atendendo às exigências legais da NR-01 e da NR-17."},
+        {"titulo": "Gestão de Afastados", "desc": "Monitoramento ativo de colaboradores afastados, com apoio ao processo de reabilitação e estratégias para reduzir o impacto no absenteísmo e nos custos da empresa."}
+      ]
+    },
+    {
+      "nome": "Segurança do Trabalho",
+      "desc": "PGR, GRO, LTCAT, laudos técnicos e treinamentos NR, com foco em prevenção e conformidade.",
+      "detalhes": [
+        {"titulo": "PGR — Programa de Gerenciamento de Riscos", "desc": ""},
+        {"titulo": "LTCAT — Laudo Técnico das Condições do Ambiente de Trabalho", "desc": ""},
+        {"titulo": "Laudo de Insalubridade e Periculosidade", "desc": ""},
+        {"titulo": "AET — Análise Ergonômica do Trabalho", "desc": ""},
+        {"titulo": "PPP — Perfil Profissiográfico Previdenciário", "desc": ""},
+        {"titulo": "CIPA — Assessoria, Eleição e Treinamento", "desc": ""},
+        {"titulo": "Brigada de Incêndio", "desc": "Formação e capacitação de brigadistas para prevenção e combate a princípios de incêndio, conforme normas técnicas e legislação local."},
+        {"titulo": "Elaboração de Laudos Técnicos de Segurança do Trabalho", "desc": "Documentação técnica especializada para embasar decisões, adequações e defesas em fiscalizações e processos trabalhistas."},
+        {"titulo": "Mapa de Risco", "desc": "Representação gráfica dos riscos identificados no ambiente de trabalho, exigência da NR-05 que facilita a percepção de risco pelos próprios trabalhadores."}
+      ]
+    },
+    {
+      "nome": "eSocial",
+      "desc": "Gestão completa dos eventos de SST (S-2210, S-2220 e S-2240), com integração ao sistema SOC e relatórios digitais para atender às exigências legais com segurança e agilidade.",
+      "detalhes": []
+    },
+    {
+      "nome": "Qualidade de Vida",
+      "desc": "Canal de saúde para trabalhadores: artigos, dicas e calculadoras de autoavaliação.",
+      "detalhes": [
+        {"titulo": "Ações médicas de prevenção e promoção à saúde", "desc": ""},
+        {"titulo": "Palestras de saúde", "desc": ""},
+        {"titulo": "Palestras de saúde mental", "desc": ""},
+        {"titulo": "Treinamentos na área", "desc": ""}
+      ]
+    },
+    {
+      "nome": "Terceirização de SESMT e Gestão Ambulatorial",
+      "desc": "Implantação e gestão completa de ambulatórios e SESMT, com infraestrutura adequada às necessidades da sua empresa.",
+      "detalhes": [],
+      "destaque": "Você sabia que os integrantes do SESMT não precisam ser contratados via CLT e que a terceirização pode agregar conhecimento técnico especializado e maior capacidade de entrega? Realizamos a implantação e a gestão completa de ambulatórios e SESMT, com infraestrutura adequada às necessidades da sua empresa e supervisão de profissionais capacitados, garantindo conformidade legal e tranquilidade para o seu negócio."
+    }
+  ],
+  "pilares": [
+    {"nome": "Cuidado Humanizado", "desc": "Colocamos a saúde e o bem-estar físico, mental e social dos trabalhadores no centro de tudo que fazemos, com atendimento personalizado."},
+    {"nome": "Excelência Técnica", "desc": "Atuamos com rigor científico, atualização constante e compromisso com os mais altos padrões profissionais."},
+    {"nome": "Prevenção Ativa", "desc": "Trabalhamos de forma proativa para garantir a saúde ocupacional ao longo de toda a vida profissional, antecipando riscos."},
+    {"nome": "Inovação com Propósito", "desc": "Adotamos tecnologias e processos modernos para gerar valor, agilidade e resultados sustentáveis."},
+    {"nome": "Segurança Jurídica", "desc": "Conformidade total com as legislações e normas, reduzindo riscos e fortalecendo a confiança dos clientes."},
+    {"nome": "Parceria Estratégica", "desc": "Atuamos como uma extensão da empresa, com escuta ativa e proximidade, desenvolvendo soluções sob medida."}
+  ],
+  "treinamentos": {
+    "formacao": [
+      {"nr": "NR 1", "nome": "Treinamento de Integração de Segurança", "carga": "1 hr", "v1": 150, "v6": 80, "v11": 50},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 1", "carga": "8 hrs", "v1": null, "v6": null, "v11": null},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 2", "carga": "12 hrs", "v1": null, "v6": null, "v11": null},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 3", "carga": "16 hrs", "v1": null, "v6": null, "v11": null},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 4", "carga": "20 hrs", "v1": null, "v6": null, "v11": null},
+      {"nr": "NR 6", "nome": "Treinamento sobre EPI", "carga": "2 hrs", "v1": 300, "v6": 165, "v11": 105},
+      {"nr": "NR 11", "nome": "Transporte/Movimentação — Pontes Rolantes", "carga": "8 hrs", "v1": 950, "v6": 520, "v11": 330},
+      {"nr": "NR 11", "nome": "Transporte/Movimentação — Plataformas Elevatórias (PTA)", "carga": "8 hrs", "v1": 950, "v6": 520, "v11": 330},
+      {"nr": "NR 11", "nome": "Operador Empilhadeira (Elétrica/Gás)", "carga": "16 hrs", "v1": 1350, "v6": 745, "v11": 470},
+      {"nr": "NR 11", "nome": "Operador Empilhadeira (Transpaleteira/manual/patolada)", "carga": "8 hrs", "v1": 850, "v6": 470, "v11": 300},
+      {"nr": "NR 12", "nome": "Segurança na Operação com Máquinas e Equipamentos (Ferramentas Manuais)", "carga": "4 hrs", "v1": 450, "v6": 250, "v11": 160},
+      {"nr": "NR 10", "nome": "Ergonomia — NR 10 Básico", "carga": "40 hrs", "v1": 2450, "v6": 1350, "v11": 860},
+      {"nr": "NR 10", "nome": "Ergonomia — NR 10 SEP", "carga": "40 hrs", "v1": 2450, "v6": 1350, "v11": 860},
+      {"nr": "NR 13", "nome": "Operador de Caldeira (teórico — estágio supervisionado não incluso)", "carga": "40 hrs", "v1": 1650, "v6": 910, "v11": 580},
+      {"nr": "NR 17", "nome": "Treinamento de Ergonomia", "carga": "1 hr", "v1": 150, "v6": 80, "v11": 50},
+      {"nr": "NR 18", "nome": "Condições e Meio Ambiente na Construção Civil (Integração)", "carga": "4 hrs", "v1": 350, "v6": 195, "v11": 120},
+      {"nr": "NR 20", "nome": "Trabalho com Inflamáveis e Combustíveis", "carga": "8 hrs", "v1": 750, "v6": 415, "v11": 260},
+      {"nr": "NR 23", "nome": "Prevenção e Combate a Incêndios", "carga": "8 hrs", "v1": 575, "v6": 315, "v11": 200},
+      {"nr": "NR 32", "nome": "Trabalho em Serviços de Saúde", "carga": "4 hrs", "v1": 400, "v6": 220, "v11": 140},
+      {"nr": "NR 33", "nome": "Espaços Confinados", "carga": "16 hrs", "v1": 1450, "v6": 800, "v11": 505},
+      {"nr": "NR 35", "nome": "Segurança para Trabalhos em Altura", "carga": "8 hrs", "v1": 950, "v6": 520, "v11": 330},
+      {"nr": "", "nome": "Primeiros Socorros", "carga": "4 hrs", "v1": 550, "v6": 300, "v11": 190},
+      {"nr": "", "nome": "Brigada de Incêndio (Básico)", "carga": "16 hrs", "v1": 875, "v6": 480, "v11": 305},
+      {"nr": "", "nome": "Proteção Respiratória", "carga": "2 hrs", "v1": 300, "v6": 80, "v11": 50},
+      {"nr": "", "nome": "Proteção Auditiva", "carga": "2 hrs", "v1": 300, "v6": 80, "v11": 50}
+    ],
+    "reciclagem": [
+      {"nr": "NR 1", "nome": "Treinamento de Integração de Segurança", "carga": "1 hr", "v1": 150, "v6": 80, "v11": 50},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 1", "carga": "8 hrs", "v1": 575, "v6": 200, "v11": 170},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 2", "carga": "12 hrs", "v1": 625, "v6": 280, "v11": 160},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 3", "carga": "16 hrs", "v1": 850, "v6": 350, "v11": 140},
+      {"nr": "NR 5", "nome": "Treinamento de CIPA — Grau de Risco 4", "carga": "20 hrs", "v1": 1250, "v6": 450, "v11": 130},
+      {"nr": "NR 6", "nome": "Treinamento sobre EPI", "carga": "2 hrs", "v1": 300, "v6": 165, "v11": 105},
+      {"nr": "NR 11", "nome": "Transporte/Movimentação — Pontes Rolantes", "carga": "4 hrs", "v1": 475, "v6": 260, "v11": 165},
+      {"nr": "NR 11", "nome": "Transporte/Movimentação — Plataformas Elevatórias (PTA)", "carga": "4 hrs", "v1": 475, "v6": 260, "v11": 165},
+      {"nr": "NR 11", "nome": "Operador Empilhadeira (Elétrica/Gás)", "carga": "8 hrs", "v1": 675, "v6": 372.5, "v11": 235},
+      {"nr": "NR 11", "nome": "Operador Empilhadeira (Transpaleteira/manual/patolada)", "carga": "8 hrs", "v1": 850, "v6": 470, "v11": 300},
+      {"nr": "NR 12", "nome": "Segurança na Operação com Máquinas e Equipamentos (Ferramentas Manuais)", "carga": "4 hrs", "v1": 450, "v6": 250, "v11": 160},
+      {"nr": "NR 10", "nome": "Ergonomia — NR 10 Básico", "carga": "20 hrs", "v1": 1225, "v6": 675, "v11": 430},
+      {"nr": "NR 10", "nome": "Ergonomia — NR 10 SEP", "carga": "20 hrs", "v1": 1225, "v6": 675, "v11": 430},
+      {"nr": "NR 13", "nome": "Operador de Caldeira (teórico — estágio supervisionado não incluso)", "carga": "40 hrs", "v1": 1650, "v6": 910, "v11": 580},
+      {"nr": "NR 17", "nome": "Treinamento de Ergonomia", "carga": "1 hr", "v1": 150, "v6": 80, "v11": 50},
+      {"nr": "NR 18", "nome": "Condições e Meio Ambiente na Construção Civil (Integração)", "carga": "4 hrs", "v1": 350, "v6": 195, "v11": 120},
+      {"nr": "NR 20", "nome": "Trabalho com Inflamáveis e Combustíveis", "carga": "8 hrs", "v1": 750, "v6": 415, "v11": 260},
+      {"nr": "NR 23", "nome": "Prevenção e Combate a Incêndios", "carga": "8 hrs", "v1": 575, "v6": 315, "v11": 200},
+      {"nr": "NR 32", "nome": "Trabalho em Serviços de Saúde", "carga": "4 hrs", "v1": 400, "v6": 220, "v11": 140},
+      {"nr": "NR 33", "nome": "Espaços Confinados", "carga": "8 hrs", "v1": 725, "v6": 400, "v11": 252.5},
+      {"nr": "NR 35", "nome": "Segurança para Trabalhos em Altura", "carga": "8 hrs", "v1": 950, "v6": 520, "v11": 330},
+      {"nr": "", "nome": "Primeiros Socorros", "carga": "4 hrs", "v1": 550, "v6": 300, "v11": 190},
+      {"nr": "", "nome": "Brigada de Incêndio (Básico)", "carga": "16 hrs", "v1": 875, "v6": 480, "v11": 305},
+      {"nr": "", "nome": "Proteção Respiratória", "carga": "2 hrs", "v1": 300, "v6": 80, "v11": 50},
+      {"nr": "", "nome": "Proteção Auditiva", "carga": "2 hrs", "v1": 300, "v6": 80, "v11": 50}
+    ],
+    "outros": [
+      {"nr": "", "nome": "Workshops e palestras sobre segurança e saúde no trabalho", "valorPessoa": 80, "minimoPessoas": 5},
+      {"nr": "SESMT", "nome": "Consultoria SESMT: Elaboração PGR, LTCAT, eSocial e Gerenciamento de Riscos", "valorPessoa": 0, "minimoPessoas": 1}
+    ]
+  },
+  "orcamento": {
+    "Grau I e II": [
+      {"faixa": "1 a 5 funcionários", "valor": 800},
+      {"faixa": "6 a 20 funcionários", "valor": 1880},
+      {"faixa": "21 a 50 funcionários", "valor": 5800},
+      {"faixa": "51 a 100 funcionários", "valor": 12000}
+    ]
+  },
+  "exames": [
+    ["Exame Clínico (Admissional, Demissional, Periódico, Retorno ao Trabalho, Mudança de Risco)", 50.00],
+    ["1,2-Ciclo-Hexanodiol - Urina", 295.00],
+    ["2,5-Hexanodiona - Urina", 54.25],
+    ["Acetilcolinesterase Eritrocitária", 70.80],
+    ["Acetona Urinária", 72.00],
+    ["Ácido Delta Aminolevulínico (ALA-U)", 36.00],
+    ["Ácido Delta Aminolevulínico (para chumbo)", 36.00],
+    ["Ácido Fórmico", 410.00],
+    ["Ácido Hipúrico (para tolueno)", 40.80],
+    ["Ácido Mandélico (para estireno)", 54.46],
+    ["Ácido Mandélico (para etilbenzeno)", 54.46],
+    ["Ácido Metilhipúrico (para xilenos)", 40.80],
+    ["Ácido Trans,trans-Mucônico - Urina", 129.60],
+    ["Ácido Tricloroacético - Urina", 32.66],
+    ["Anti HBs Quantitativo", 38.40],
+    ["Audiometria Tonal Ocupacional", 35.00],
+    ["Avaliação da Acuidade Visual", 20.00],
+    ["Beta HCG - Quantitativo", 54.60],
+    ["Bilirrubina Total e Fracionada", 19.56],
+    ["Cádmio - Urina", 66.40],
+    ["Carboxihemoglobina - Sangue", 28.05],
+    ["Cobalto Urinário", 136.80],
+    ["Colinesterase Plasmática", 25.80],
+    ["Creatinina - Pesquisa e/ou Dosagem", 12.95],
+    ["Cromo", 53.52],
+    ["Cultura Fezes: Salmonella, Shigella, E. coli", 30.00],
+    ["Cultura, Fezes: Coprocultura", 28.80],
+    ["Dosagem de Chumbo - Sérico", 44.40],
+    ["ECG Convencional de até 12 Derivações", 35.00],
+    ["Eletroencefalograma - EEG", 75.00],
+    ["Espirometria", 55.00],
+    ["Fenol - Urina", 68.40],
+    ["Fosfatase Alcalina", 13.90],
+    ["Gama-Glutamil Transferase", 13.90],
+    ["Glicose - Pesquisa e/ou Dosagem", 12.95],
+    ["Hemoglobina Glicada", 30.88],
+    ["Hemograma Completo", 18.24],
+    ["Hepatite B - HBsAg", 36.00],
+    ["Hepatite C - Anti-HCV", 62.00],
+    ["Metanol Urinário", 54.00],
+    ["Metil Etil Cetona", 96.00],
+    ["Orto-Cresol na Urina", 136.15],
+    ["Parasitológico - nas Fezes", 12.85],
+    ["Radiografia Coluna Total", 79.00],
+    ["Radiografia de Coluna Cervical", 79.00],
+    ["Radiografia de Coluna Escoliose", 79.00],
+    ["Radiografia de Coluna Lombo-Sacra", 79.00],
+    ["Radiografia de Coluna Lombo-Sacra 3 Incidências", 79.00],
+    ["Radiografia de Face - Incidência de Waters (Mento-Naso)", 79.00],
+    ["Radiografia de Tórax (AP/Perfil)", 79.00],
+    ["Radiografia de Tórax PA", 79.00],
+    ["Radiografia de Tórax PA - Padrão OIT", 120.00],
+    ["Radiografia Lateral da Face / Seios da Face", 79.00],
+    ["Reação VDRL", 14.84],
+    ["Reticulócitos", 25.22],
+    ["Rotina de Urina", 15.68],
+    ["Sífilis - VDRL", 14.80],
+    ["Somatório Ácido Mandélico e Fenilglioxílico", 43.90],
+    ["T4 Livre - Tiroxina Livre", 32.50],
+    ["Teste de Ishihara Ocupacional", 20.00],
+    ["TGO - Transaminase Oxalacética", 13.90],
+    ["TGP - Transaminase Pirúvica", 13.90],
+    ["TSH - Hormônio Tireoestimulante", 32.50]
+  ],
+  "nexo": {
+    "niveis": [
+      {"id": 1, "nome": "Nível 1 — Parecer Técnico de Nexo", "desc": "Avaliação clínica e ocupacional completa + parecer conclusivo.", "valor": 1200},
+      {"id": 2, "nome": "Nível 2 — Monitoramento e Gestão", "desc": "Nível 1 + acompanhamento e reavaliações por até 90 dias.", "valor": 2400},
+      {"id": 3, "nome": "Nível 3 — Assistência Estratégica", "desc": "Níveis 1 e 2 + suporte pericial e jurídico.", "valor": 3900}
+    ]
+  },
+  "coordenacao": {
+    "saude": "Dr. Alexandre Zenkiti Hirade, CRM 17295 PR, Médico do Trabalho",
+    "seguranca": "Engenheiro de Segurança Marcos Antônio"
+  }
+}

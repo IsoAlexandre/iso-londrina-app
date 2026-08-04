@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>ISO Londrina — Apresentação Institucional</title>
+<meta name="description" content="Apresentação institucional e orçamentos — ISO Londrina">
+<meta name="theme-color" content="#4F7291">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-name">ISO Londrina</div>
+      <div class="brand-tag">Saúde &amp; Segurança do Trabalho</div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sidebar-foot">
+      <button class="btn btn-on-dark btn-sm" style="width:100%;margin-bottom:12px;" onclick="newBudget()">↺ Novo orçamento</button>
+      <div class="contato">
+        (43) 99131-6454<br>
+        contato@isolondrina.com.br<br>
+        R. Francisco Feijó Sanches, 284 — Londrina/PR
+      </div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div id="updateBar" class="update-bar">
+      Nova versão disponível. <button class="btn btn-sm btn-sage">Atualizar agora</button>
+    </div>
+    <div class="topbar">
+      <div>
+        <h1 id="pageTitle">Início</h1>
+        <div class="sub" id="pageSub">Apresentação institucional</div>
+      </div>
+      <div class="edit-toggle">
+        <div id="editToolsExtra" class="edit-tools-extra" style="display:none;">
+          <button class="btn btn-ghost btn-sm" onclick="doExportData()" title="Baixar um arquivo com todos os preços e textos atuais">⬇ Exportar dados</button>
+          <button class="btn btn-ghost btn-sm" onclick="triggerImportPicker()" title="Carregar um arquivo de dados exportado de outro tablet">⬆ Importar dados</button>
+          <button class="btn btn-ghost btn-sm" onclick="doRestoreDefaults()" title="Voltar aos preços e textos originais do app">↺ Padrão de fábrica</button>
+          <input type="file" id="importFileInput" accept="application/json" style="display:none;" onchange="onImportFileSelected(this)">
+        </div>
+        <button class="btn btn-ghost" id="btnEdit" onclick="toggleEdit()">✎ Editar dados</button>
+        <button class="btn btn-sage" id="btnSave" onclick="saveAll()" style="display:none;">Salvar alterações</button>
+      </div>
+    </div>
+
+    <div class="content" id="content">
+
+      <!-- INICIO -->
+      <section class="view active" data-view="inicio">
+        <div class="hero">
+          <span class="eyebrow">+20 anos de experiência</span>
+          <h2>Saúde e segurança do trabalho,<br>com clareza e cuidado</h2>
+          <p class="lead">Gestão médica ocupacional e segurança do trabalho para empresas de todo o Brasil, com soluções técnicas, humanizadas e personalizadas.</p>
+          <div class="stat-grid">
+            <div class="stat-card"><div class="num">20+</div><div class="lbl">Anos de experiência</div></div>
+            <div class="stat-card"><div class="num">1000+</div><div class="lbl">Empresas atendidas</div></div>
+            <div class="stat-card"><div class="num">150K+</div><div class="lbl">Atendimentos realizados</div></div>
+            <div class="stat-card"><div class="num">Brasil</div><div class="lbl">Cobertura nacional</div></div>
+          </div>
+        </div>
+
+        <div class="pilares-head">
+          <h3>Pilares Fundamentais</h3>
+          <p>Nossa atuação é guiada por princípios sólidos que garantem excelência técnica e confiança em cada projeto.</p>
+        </div>
+        <div class="pilares-grid" id="pilaresGrid"></div>
+      </section>
+
+      <!-- SOBRE -->
+      <section class="view" data-view="sobre">
+        <div class="about-grid">
+          <div class="about-block">
+            <span class="eyebrow">Quem somos</span>
+            <h2 style="font-size:26px;margin-bottom:16px;">Referência em saúde ocupacional em Londrina</h2>
+            <p>Há mais de 20 anos, a ISO Londrina é referência em saúde ocupacional e segurança do trabalho. À frente da equipe está o Dr. Alexandre Zenkiti Hirade, com quase 30 anos de atuação na área de medicina do trabalho e perícia médica, que junto a profissionais altamente qualificados garante soluções técnicas, humanizadas e personalizadas.</p>
+            <p>Com tecnologia SOC, cobertura nacional e atendimento próximo, transformamos a gestão em saúde e segurança em estratégia para proteger vidas, assegurar conformidade e fortalecer os negócios de nossos clientes.</p>
+            <div class="person-card">
+              <div class="avatar">AH</div>
+              <div>
+                <div class="pname">Dr. Alexandre Zenkiti Hirade</div>
+                <div class="prole">Médico do Trabalho · Especialista em Perícias Trabalhistas</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="mv-card"><h3>MISSÃO</h3><p>Cuidar de pessoas é o nosso trabalho. Construir ambientes seguros é o nosso compromisso.</p></div>
+            <div class="mv-card"><h3>VISÃO</h3><p>Ser referência em soluções integradas de saúde e segurança do trabalho, promovendo ambientes corporativos mais saudáveis, seguros e produtivos.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICOS -->
+      <section class="view" data-view="servicos">
+        <span class="eyebrow">Nossos serviços</span>
+        <h2 style="font-size:26px;margin-bottom:6px;">Atuamos em todas as frentes da saúde e segurança do trabalho</h2>
+        <p style="max-width:640px;margin-bottom:24px;">Soluções integradas que garantem conformidade legal, qualidade de vida e desempenho sustentável para sua empresa.</p>
+        <div class="grid-cards" id="servicosGrid"></div>
+      </section>
+
+      <!-- CADASTRO -->
+      <section class="view" data-view="cadastro">
+        <span class="eyebrow">Antes de montar o orçamento</span>
+        <h2 style="font-size:26px;margin-bottom:6px;">Dados da empresa e do responsável</h2>
+        <p style="max-width:560px;margin-bottom:24px;">Esses dados aparecem automaticamente no orçamento final gerado nas próximas etapas.</p>
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="field full">
+              <label>Nome da empresa (razão social)</label>
+              <input type="text" id="cli_empresa" placeholder="Ex: Contabilidade Modelo Ltda" oninput="updateCliente('empresa', this.value)">
+            </div>
+            <div class="field">
+              <label>CNPJ (opcional)</label>
+              <input type="text" id="cli_cnpj" placeholder="00.000.000/0001-00" maxlength="18" oninput="onCnpjInput(this)">
+            </div>
+            <div class="field">
+              <label>Responsável / Contato</label>
+              <input type="text" id="cli_responsavel" placeholder="Nome completo" oninput="updateCliente('responsavel', this.value)">
+            </div>
+            <div class="field">
+              <label>Telefone / WhatsApp</label>
+              <input type="text" id="cli_telefone" placeholder="(43) 90000-0000" oninput="updateCliente('telefone', this.value)">
+            </div>
+            <div class="field">
+              <label>E-mail</label>
+              <input type="email" id="cli_email" placeholder="contato@empresa.com.br" oninput="updateCliente('email', this.value)">
+            </div>
+            <div class="field full" style="border-top:1px dashed var(--border);padding-top:16px;margin-top:4px;">
+              <label>Representante comercial (assinatura da proposta)</label>
+              <input type="text" id="cli_vendedor" placeholder="Nome do vendedor" oninput="updateCliente('vendedorNome', this.value)">
+            </div>
+            <div class="field">
+              <label>Telefone do representante</label>
+              <input type="text" id="cli_vendedor_tel" placeholder="(43) 90000-0000" oninput="updateCliente('vendedorTelefone', this.value)">
+            </div>
+          </div>
+          <div id="cadastroStatus" class="cadastro-status"></div>
+        </div>
+      </section>
+
+      <!-- ORCAMENTOS -->
+      <section class="view" data-view="orcamentos">
+        <span class="eyebrow">Proposta consolidada</span>
+        <h2 style="font-size:26px;margin-bottom:6px;">Orçamento</h2>
+        <p style="max-width:640px;margin-bottom:20px;">Plano por grau de risco, treinamentos, exames e Nexo Causal somados em uma única proposta.</p>
+
+        <div class="cliente-box" id="clienteBox"></div>
+
+        <div class="orc-panel">
+          <div class="orc-form">
+            <div class="field" style="margin-bottom:18px;">
+              <label>Grau de risco</label>
+              <div class="risk-toggle" id="riskToggle"></div>
+            </div>
+            <div class="field" style="margin-bottom:14px;">
+              <label>Quantidade de funcionários</label>
+              <input type="number" id="numFunc" min="1" value="5" oninput="calcOrcamento()">
+            </div>
+            <div class="result-card" id="resultCard"></div>
+            <button class="btn btn-sage" style="width:100%;" onclick="addPlanoToCart()">+ Adicionar plano ao orçamento</button>
+            <div class="tiers-edit" id="tiersEdit" style="display:none;"></div>
+          </div>
+
+          <div>
+            <div class="cart-list" id="cartList"></div>
+
+            <div class="exam-info-block">
+              <h4>Exames complementares — tabela informativa</h4>
+              <p class="exam-info-note">Estes valores não entram no total do orçamento: são cobrados à parte, conforme a demanda do cliente durante o contrato.</p>
+              <div id="examInfoList"></div>
+            </div>
+
+            <div class="exam-info-block" style="margin-top:16px;">
+              <h4>Condições de pagamento (opcional)</h4>
+              <div class="field" style="max-width:220px;">
+                <label>Dividir em quantas parcelas?</label>
+                <input type="number" id="numParcelas" min="1" placeholder="Ex: 12" oninput="renderCart()">
+              </div>
+            </div>
+
+            <div class="actions-row">
+              <button class="btn btn-terracotta" onclick="printProposal()">🖨 Imprimir / Salvar em PDF</button>
+              <button class="btn btn-sage" onclick="sharePDF()">📤 Compartilhar (PDF)</button>
+              <button class="btn btn-outline" onclick="emailProposal()">✉ Enviar por e-mail</button>
+              <button class="btn btn-outline" onclick="whatsappProposal()">💬 Enviar por WhatsApp</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TREINAMENTOS -->
+      <section class="view" data-view="treinamentos">
+        <span class="eyebrow">Capacitação</span>
+        <h2 style="font-size:26px;margin-bottom:6px;">Treinamentos e capacitações</h2>
+        <p style="max-width:640px;margin-bottom:16px;">Escolha o tipo de treinamento e toque em um item para calcular o valor e adicionar ao orçamento.</p>
+        <div class="risk-toggle" id="modalidadeToggle" style="max-width:360px;margin-bottom:22px;"></div>
+        <div class="train-grid" id="trainGrid"></div>
+        <h3 style="margin:28px 0 14px;font-size:17px;">Outros treinamentos e consultorias</h3>
+        <div class="train-grid" id="trainGridOutros"></div>
+      </section>
+
+      <!-- EXAMES -->
+      <section class="view" data-view="exames">
+        <span class="eyebrow">Tabela de valores</span>
+        <h2 style="font-size:26px;margin-bottom:6px;">Orçamento de exames complementares</h2>
+        <p style="max-width:640px;margin-bottom:20px;">Busque pelo nome do exame e adicione ao orçamento.</p>
+        <div class="search-wrap">
+          <span class="sic">🔍</span>
+          <input type="text" id="examSearch" placeholder="Buscar exame, ex: audiometria, espirometria, toxicológico..." oninput="renderExames()">
+        </div>
+        <div class="exam-count" id="examCount"></div>
+        <table class="exam-table">
+          <thead><tr><th>Exame</th><th style="text-align:right;">Valor</th><th></th></tr></thead>
+          <tbody id="examBody"></tbody>
+        </table>
+      </section>
+
+      <!-- NEXO CAUSAL -->
+      <section class="view" data-view="nexo">
+        <span class="eyebrow">Novo produto</span>
+        <h2 style="font-size:26px;margin-bottom:6px;">Avaliação de Doenças e Análise de Nexo Causal/Concausal Ocupacional</h2>
+        <div class="nexo-intro">
+          <ul>
+            <li>O parecer analisa se um problema de saúde do funcionário tem relação com o trabalho (nexo causal), se o trabalho contribuiu ou agravou uma condição já existente (nexo concausal), ou se não há relação técnica demonstrável.</li>
+            <li>A avaliação segue uma metodologia estruturada: entrevista e exame clínico do trabalhador, análise de documentos da empresa (PGR, AET, ASOs, CATs), organização cronológica do histórico médico e aplicação de critérios técnicos de causalidade reconhecidos.</li>
+            <li>Toda análise resulta em uma de quatro conclusões: nexo provável, nexo possível, nexo improvável, ou elementos insuficientes para conclusão — com justificativa técnica documentada e rastreável.</li>
+            <li>Útil tanto para gestão interna de afastamentos e readaptação, quanto para suporte técnico em processos trabalhistas já em curso.</li>
+          </ul>
+        </div>
+
+        <div class="nivel-grid" id="nivelGrid"></div>
+
+        <div class="nexo-confirm">
+          <div class="field">
+            <label>Valor final acordado</label>
+            <input type="number" id="nexoValorFinal" step="0.01">
+          </div>
+          <button class="btn btn-sage" style="margin-top:14px;" onclick="addNexoToCart()">+ Adicionar ao orçamento</button>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="serviceModal" onclick="if(event.target===this) closeServiceModal()">
+  <div class="modal-box" id="serviceModalBox"></div>
+</div>
+
+<div class="modal-overlay" id="confirmModal">
+  <div class="modal-box confirm-box" id="confirmModalBox"></div>
+</div>
+
+<div id="printArea" class="print-only"></div>
+<div class="toast" id="toast">Alterações salvas</div>
+
+<script src="js/vendor/jspdf.umd.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
