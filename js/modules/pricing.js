@@ -8,5 +8,6 @@ export function tierFor(t, qty) {
 
 export function parseFaixa(str) {
   const nums = str.match(/\d+/g).map(Number);
-  return { min: nums[0], max: nums[1] };
+  // Faixas de valor único (ex.: "6 funcionários") têm apenas um número — usa-o como min e max.
+  return { min: nums[0], max: nums.length > 1 ? nums[1] : nums[0] };
 }

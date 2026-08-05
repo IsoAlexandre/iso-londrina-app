@@ -107,12 +107,20 @@ export function calcOrcamento() {
   const card = document.getElementById('resultCard');
   const tiers = state.DATA.orcamento[state.selectedRisk] || [];
   const match = tiers.find(t => { const r = parseFaixa(t.faixa); return n >= r.min && n <= r.max; });
+  const maxTier = tiers.reduce((mx, t) => Math.max(mx, parseFaixa(t.faixa).max), 0);
   if (match) {
     state.currentPlano = { grau: state.selectedRisk, faixa: match.faixa, valor: match.valor, funcionarios: n };
     card.innerHTML = `
       <div class="r-label">${state.selectedRisk} · ${match.faixa}</div>
       <div class="r-value">${formatBRL(match.valor)}</div>
       <div class="r-detail">Valor de proposta estimado para ${n} funcionário(s).</div>`;
+  } else if (n > maxTier && maxTier > 0) {
+    // Acima da maior faixa cadastrada — proposta sob consulta, sem valor fechado.
+    state.currentPlano = null;
+    card.innerHTML = `
+      <div class="r-label">${state.selectedRisk}</div>
+      <div class="r-value" style="font-size:20px;">Consulte a equipe comercial</div>
+      <div class="r-detail">Para ${n} funcionário(s) a proposta é personalizada. Fale com o time comercial.</div>`;
   } else {
     state.currentPlano = null;
     card.innerHTML = `
