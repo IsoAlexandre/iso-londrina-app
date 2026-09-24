@@ -247,11 +247,92 @@
   ::-webkit-scrollbar{width:8px;}
   ::-webkit-scrollbar-thumb{background:var(--sand-dark);border-radius:4px;}
 
+  /* ---------------- PROPOSAL DOCUMENT (print / "salvar como PDF") ----------------
+     Palette = app pastels for fills/borders; text and marks use the darker
+     variants so the page stays legible when printed in black & white. */
+  .pd-doc{
+    --pd-blue:var(--blue-dark); --pd-green:#4E8A62; --pd-salmon:var(--terracotta-dark);
+    --pd-blue-tint:#EAF1F7; --pd-green-tint:#EEF5F0; --pd-salmon-tint:#FBEFE9;
+    --pd-line:#D5DEE3; --pd-muted:#6B6A5E;
+    font-family:'Inter',Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.5;
+    padding:0 17mm;background:#fff;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+  .pd-doc p{margin:0;color:var(--ink);line-height:1.5;}
+  .pd-doc h1,.pd-doc h2{font-family:inherit;}
+  .pd-page{width:100%;border-collapse:collapse;}
+  .pd-page td{padding:0;vertical-align:top;}
+  .pd-page-top{height:13mm;}
+  .pd-page-bottom{height:24mm;}
+
+  .pd-brand{text-align:center;padding-bottom:9pt;margin-bottom:14pt;border-bottom:1.6pt solid var(--pd-blue);position:relative;}
+  .pd-brand::after{content:'';position:absolute;left:0;right:0;bottom:-4.5pt;border-bottom:.8pt solid var(--sage);}
+  .pd-brand-name{font-size:22pt;font-weight:700;letter-spacing:.2em;margin-right:-.2em;color:var(--pd-blue);line-height:1.15;}
+  .pd-brand-sub{font-size:8.6pt;color:var(--pd-muted);margin-top:3pt;letter-spacing:.02em;}
+
+  .pd-date{text-align:right;font-style:italic;color:var(--pd-muted);font-size:9.4pt;margin:10pt 0 6pt;}
+  .pd-title-wrap{margin-bottom:12pt;}
+  .pd-title{font-size:19pt;font-weight:800;letter-spacing:.05em;color:var(--pd-blue);margin:0;line-height:1.2;}
+  .pd-doc .pd-subtitle{font-style:italic;color:var(--pd-salmon);font-size:10.6pt;margin-top:2pt !important;}
+
+  .pd-client{display:flex;align-items:baseline;gap:6pt;background:var(--pd-blue-tint);border-left:3.5pt solid var(--pd-salmon);padding:6pt 11pt;margin-bottom:12pt;}
+  .pd-client-label{font-size:9.4pt;color:var(--pd-muted);}
+  .pd-client-name{font-size:10.6pt;font-weight:700;color:var(--pd-blue);text-transform:uppercase;}
+  .pd-text{text-align:justify;}
+
+  .pd-section{margin-top:15pt;}
+  .pd-section-title{font-size:10.8pt;font-weight:700;letter-spacing:.03em;color:var(--pd-blue);background:var(--pd-blue-tint);border-left:3.5pt solid var(--pd-blue);border-bottom:.8pt solid var(--blue-light);padding:4.5pt 10pt;margin:0 0 8pt;break-after:avoid;page-break-after:avoid;}
+  .pd-section-num{color:var(--pd-salmon);margin-right:3pt;}
+  .pd-doc .pd-note{font-style:italic;color:var(--pd-muted);font-size:9pt;margin-bottom:5pt !important;}
+
+  .pd-escopo{border:.8pt solid var(--pd-line);border-radius:5pt;overflow:hidden;}
+  .pd-escopo-row{padding:6pt 11pt;border-bottom:.8pt solid var(--pd-line);break-inside:avoid;}
+  .pd-escopo-row:last-child{border-bottom:none;}
+  .pd-escopo-head{font-weight:700;color:var(--pd-blue);margin-bottom:4pt;}
+  .pd-checklist{list-style:none;margin:0;padding:0;}
+  .pd-checklist li{position:relative;padding:1.4pt 0 1.4pt 15pt;}
+  .pd-check-mark{position:absolute;left:1pt;top:1.4pt;color:var(--pd-green);font-weight:800;}
+  .pd-escopo-line{position:relative;padding-left:24pt;}
+  .pd-escopo-line::before{content:'';position:absolute;left:11pt;top:11pt;width:4pt;height:4pt;background:var(--pd-salmon);}
+
+  .pd-exam-table{border:.8pt solid var(--pd-line);border-radius:5pt;overflow:hidden;}
+  .pd-exam-row{display:flex;justify-content:space-between;align-items:baseline;gap:12pt;padding:4.5pt 11pt;border-bottom:.6pt solid var(--pd-line);break-inside:avoid;}
+  .pd-exam-row:last-child{border-bottom:none;}
+  .pd-exam-head{background:var(--pd-blue);color:#fff;font-weight:700;text-transform:uppercase;font-size:8pt;letter-spacing:.06em;border-bottom:none;}
+  .pd-exam-val{font-weight:700;color:var(--pd-blue);white-space:nowrap;flex-shrink:0;}
+
+  .pd-invest{display:flex;gap:10pt;margin-top:7pt;}
+  .pd-invest-box{flex:1;border:1.2pt solid var(--sage);background:var(--pd-green-tint);border-radius:8pt;padding:9pt 12pt;text-align:center;}
+  .pd-invest--single .pd-invest-box{flex:0 1 50%;}
+  .pd-invest-box--parc{border-color:var(--blue);background:var(--pd-blue-tint);}
+  .pd-invest-label{display:block;font-size:7.8pt;text-transform:uppercase;letter-spacing:.16em;color:var(--pd-muted);font-weight:700;}
+  .pd-invest-value{display:block;font-size:18pt;font-weight:800;color:var(--pd-blue);line-height:1.25;margin:2pt 0 1pt;}
+  .pd-invest-hint{display:block;font-size:8.2pt;color:var(--pd-muted);font-style:italic;}
+  .pd-doc .pd-invest-note{font-size:8.4pt;color:var(--pd-muted);font-style:italic;margin-top:6pt !important;}
+
+  .pd-list{list-style:none;padding:0;margin:0;}
+  .pd-list li{position:relative;padding:1.6pt 0 1.6pt 13pt;}
+  .pd-list li::before{content:'';position:absolute;left:1pt;top:6.4pt;width:4pt;height:4pt;background:var(--pd-salmon);}
+
+  .pd-sign{margin-top:16pt;}
+  .pd-sign-line{width:62mm;border-top:.8pt solid var(--pd-blue);margin:26pt 0 5pt;}
+  .pd-sign-name{font-weight:700;color:var(--pd-blue);font-size:10.4pt;text-transform:uppercase;letter-spacing:.02em;}
+  .pd-sign-role,.pd-sign-phone{color:var(--pd-muted);}
+  .pd-keep{break-inside:avoid;page-break-inside:avoid;}
+
+  .pd-footer{border-top:1pt solid var(--sage);padding-top:5pt;text-align:center;font-size:7.8pt;color:var(--pd-muted);line-height:1.5;}
+  .pd-footer-line{margin:0;}
+  .pd-footer-contact{color:var(--pd-blue);font-weight:600;}
+
   .print-only{display:none;}
   @media print{
-    body *{visibility:hidden;}
-    #printArea, #printArea *{visibility:visible;}
-    #printArea{display:block !important;position:absolute;top:0;left:0;width:100%;padding:20px;}
+    /* Zero page margin leaves the browser no room to draw its own
+       header/footer (URL, date/time, "1/2" page numbers). */
+    @page{ size:A4; margin:0; }
+    html,body{background:#fff !important;margin:0 !important;padding:0 !important;height:auto !important;overflow:visible !important;}
+    body > *:not(#printArea){display:none !important;}
+    #printArea{display:block !important;}
+    .pd-footer{position:fixed;left:17mm;right:17mm;bottom:9mm;background:#fff;}
   }
 
   @media (max-width:1000px){

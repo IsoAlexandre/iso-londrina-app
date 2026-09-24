@@ -87,8 +87,9 @@ export function addPlanoToCart() {
   addToCart({
     tipo: 'Plano',
     nome: `Plano ${state.currentPlano.grau}`,
-    detalhe: `${state.currentPlano.faixa} · ${state.currentPlano.funcionarios} funcionário(s)`,
+    detalhe: `${state.currentPlano.funcionarios} funcionário(s)`,
     valor: state.currentPlano.valor,
+    funcionarios: state.currentPlano.funcionarios,
   });
 }
 

@@ -1,6 +1,6 @@
 // Bump this string on every deploy that changes any precached file — the only
 // manual step needed since this project has no build tooling.
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = 'iso-londrina-' + CACHE_VERSION;
 
 const PRECACHE_URLS = [
